@@ -32,3 +32,9 @@ function App() {
 
 export default App
 ```
+
+## Demo
+
+```
+https://toygr.github.io/date-range-selector
+```
