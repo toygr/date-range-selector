@@ -3,6 +3,12 @@ import { Dispatch, MutableRefObject, SetStateAction, useEffect, useRef, useState
 import * as d3 from 'd3'
 import SVGs from "./svg";
 import './style.css'
+/**
+ * Represents a range of dates with a start and end date.
+ * @typedef {Object} RangeDateType
+ * @property {Date} start - The starting date of the range.
+ * @property {Date} end - The ending date of the range.
+ */
 type RangeDateType = {
     start: Date;
     end: Date;
@@ -32,6 +38,17 @@ const RangeItem = ({ range, zoomEnabled, editing }: { range: { start: number; en
         </div>
     )
 }
+/**
+ * A component that allows users to select a range of dates.
+ * 
+ * @param {Object} props - The properties for the RangeSelector component.
+ * @param {RangeDateType[]} props.ranges - An array of date ranges.
+ * @param {Dispatch<SetStateAction<RangeDateType[]>>} props.setRanges - A function to update the date ranges.
+ * @param {MutableRefObject<((date: Date) => void) | undefined>} props.ref_zoomTo - A reference to a zoom function that accepts a date.
+ * @param {MutableRefObject<boolean>} props.ref_save - A reference to a boolean indicating save state.
+ * 
+ * @returns {JSX.Element} The rendered RangeSelector component.
+ */
 const RangeSelector = ({ ranges, setRanges, ref_zoomTo, ref_save }: {
     ranges: RangeDateType[],
     setRanges: Dispatch<SetStateAction<RangeDateType[]>>,
