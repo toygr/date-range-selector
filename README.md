@@ -4,6 +4,8 @@
 I faced to create timeline that dynamically changes, and I tried to find proper package, but I couldn't it.
 So I have decided to create this package.
 
+![image](https://github.com/user-attachments/assets/c36e57c8-2998-44d6-af92-878c732b1e4a)
+
 ## How to install
 ```npm i @toygr/date-range-selector```
 
